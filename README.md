@@ -1,13 +1,7 @@
 # ProjectNum2
 
-Hello
+Title : My 5 
 
-
-Idea #1 : "Brewology" beer rating system/database. Allows for ranking/scoring/submitting beers and maybe the nearest location to find.
-
-**Idea #2 : Fantasy Basketball based only on the teams that are still playing ATM for the Covid-19 schedule.  https://developer.yahoo.com/fantasysports/guide/ http://nbasense.com/nba-api/Data/Bios/Player/PlayerBio https://www.fantasybasketballnerd.com/fantasy-basketball-api
-
-    **NBA "Cards" follows the stats and status of personal favorite players and maybe game schedule? 
-        -Users would pick a "starting five" and their stats would be shown throughout the games.
-
-Idea #3 : 
+Ever wanted to compare your Top 5 NBA players with a friend? Or test someones NBA knowledge by who they like?  But, hate thinking of your top 5 on the spot?
+ Well, thanks to "My 5"; you dont have to. With "My 5" you can save your top 5 players and maybe some subs. And it's Easy! No more guessing on the spot, no more forgetting players and being in that "Oh I like that player too" or "Who did I leave someone?". With "My 5" you can view stats, save, update, delete, and downgrade your players on the fly.
+ 
