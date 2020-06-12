@@ -6,7 +6,7 @@ USE start5_db;
 CREATE TABLE start5 (
 	id int NOT NULL AUTO_INCREMENT,
 	p_name varchar(255) NOT NULL,
-	gp int NOT NULL,
+	gp int,
 	tot_min int NOT NULL,
 	tot_points int NOT NULL,
     fgm int NOT NULL,
@@ -29,3 +29,4 @@ CREATE TABLE start5 (
     ts_perc dec (3,1),
 	PRIMARY KEY (id)
     );
+    
