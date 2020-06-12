@@ -192,9 +192,10 @@ new css */
   background-color: #2e353d;
   position: fixed;
   top: 0px;
-  width: 300px;
+  width: 150px;
   height: 100%;
   color: #e1ffff;
+  padding: 10px;
 }
 .nav-side-menu .brand {
   background-color: #23282e;

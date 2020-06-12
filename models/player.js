@@ -1,4 +1,3 @@
-
 // Creating our User model
 module.exports = function(sequelize, DataTypes) {
   return sequelize.define("Player", {
