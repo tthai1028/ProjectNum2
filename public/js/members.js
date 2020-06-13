@@ -12,6 +12,11 @@ $(document).ready(() => {
     fav ? $(this).css("color", "white") : $(this).css("color", "red");
     $(this).data("fav", !fav);
   });
+
+  $(".player").hover(function() {
+    $(".player").css("z-index", 1)
+    $(this).css('z-index', 100)
+  });
 });
 
 function myFunction() {

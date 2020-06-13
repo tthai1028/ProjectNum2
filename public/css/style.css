@@ -17,12 +17,12 @@ body {
     justify-content: space-between;
 }
 
-.container .player {
+.player {
     position: relative;
     border-radius: 10px;
 }
 
-.container .player .icon {
+.player .icon {
     position: absolute;
     top: 0;
     left: 0;
@@ -33,20 +33,20 @@ body {
     z-index: 1;
 }
 
-.container .player:nth-child(1) .icon {
+.player:nth-child(1) .icon {
     background: #e07768;
 }
 
-.container .player:nth-child(2) .icon {
+.player:nth-child(2) .icon {
     background: #6eadd4;
 }
 
-.container .player:nth-child(3) .icon {
+.player:nth-child(3) .icon {
     background: #4aada9;
 }
 
 
-.container .player .icon .fa {
+.player .icon .fa {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -66,13 +66,13 @@ i {
     color: #fff;
 }
 
-.container .player .face {
+.player .face {
     width: 300px;
     height: 200px;
     transition: 0.5s;
 }
 
-.container .player .face.face1 {
+.player .face.face1 {
     position: relative;
     background: #333;
     display: flex;
@@ -82,25 +82,25 @@ i {
     transform: translateY(100px);
 }
 
-.container .player:hover .face.face1{
+.player:hover .face.face1{
     background: #ff0057;
     transform: translateY(0px);
 }
 
-.container .player .face.face1 .content {
+.player .face.face1 .content {
     opacity: 1;
     transition: 0.5s;
 }
 
-.container .player:hover .face.face1 .content {
+.player:hover .face.face1 .content {
     opacity: 1;
 }
 
-.container .player .face.face1 .content i{
+.player .face.face1 .content i{
     max-width: 100px;
 }
 
-.container .player .face.face2 {
+.player .face.face2 {
     position: relative;
     background: #fff;
     display: flex;
@@ -112,18 +112,19 @@ i {
     transform: translateY(-100px);
 }
 
-.container .player:hover .face.face2{
+.player:hover .face.face2{
+
     transform: translateY(0);
 }
 
-.container .player .face.face2 .content p {
+.player .face.face2 .content p {
     margin: 0;
     padding: 0;
     text-align: center;
     color: #414141;
 }
 
-.container .player .face.face2 .content h3 {
+.player .face.face2 .content h3 {
     margin: 0 0 10px 0;
     padding: 0;
     color: #fff;
@@ -146,6 +147,8 @@ i {
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
 }
+
+
 
 #myUL {
   /* Remove default list styling */
@@ -192,8 +195,8 @@ new css */
   background-color: #2e353d;
   position: fixed;
   top: 0px;
-  width: 150px;
-  height: 100%;
+  width: 250px;
+  height: ;
   color: #e1ffff;
   padding: 10px;
 }
@@ -209,20 +212,17 @@ new css */
 }
 
 .video {
-  width: 220px;
-  height: 300px;
-  border: 1px solid black; 
+  /* width: 220px; */
   display: flex;
   align-self: center;
-  position: position:absolute; right:80px; top:20px;
+  width:90%;
+  margin:auto;
 }
 
 .kobe {
-  width: 220px;
-  height: 300px;
-  border: 1px solid black; 
   display: flex;
-  position: position:absolute; right:80px; top:20px;
+  width:90%;
+  margin:auto
 }
 
 .nav-side-menu ul,
