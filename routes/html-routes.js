@@ -27,7 +27,6 @@ module.exports = function(app) {
   app.get("/members", isAuthenticated, (req, res) => {
     db.Player.findAll().then(data => {
       const players = data.map(a=>a.dataValues);
-      console.log(players);
       res.render("member", { players })
     });
   });
