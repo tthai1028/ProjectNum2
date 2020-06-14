@@ -50,4 +50,20 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.put("/api/fav/:action/:uId/:pId", async ({ params }, res) => {
+    console.log(params);
+    const { dataValues } = await db.User.findOne({ where: { id: params.uId } });
+    const favs = JSON.parse(dataValues.favs);
+    params.action === "add"
+      ? favs.push(params.pId)
+      : favs.splice(favs.indexOf(params.pId), 1);
+    await db.User.update(
+      { favs: JSON.stringify(favs) },
+      {
+        where: { id: params.uId }
+      }
+    );
+    console.log(favs);
+  });
 };

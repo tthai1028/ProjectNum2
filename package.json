@@ -26,7 +26,8 @@
     "start": "node server.js",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "seed": "cd utils && node seeder.js"
   },
   "repository": {
     "type": "git",

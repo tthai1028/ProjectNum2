@@ -1,7 +1,9 @@
 $(document).ready(() => {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
-  $.get("/api/user_data").then((data) => {
+  let currentUser;
+  $.get("/api/user_data").then(data => {
+    currentUser = data;
     $(".member-name").text(data.email);
   });
 
@@ -9,27 +11,54 @@ $(document).ready(() => {
 
   $(".fa-heart").on("click", function() {
     const fav = $(this).data("fav");
-    fav ? $(this).css("color", "white") : $(this).css("color", "red");
+    if (fav) {
+      $(this).css("color", "white");
+      console.log("removing ");
+      removeFav($(this).data("id"));
+    } else {
+      $(this).css("color", "red");
+      console.log("adding ", $(this).data("id"));
+      addFav($(this).data("id"));
+    }
     $(this).data("fav", !fav);
   });
 
-  $(".player").hover(function() {
-    $(".player").css("z-index", 1)
-    $(this).css('z-index', 100)
-  });
-});
+  $(".player").hover(
+    function() {
+      $(".player").css("z-index", 1);
+      $(this).css("z-index", 100);
+    },
+    () => {
+      $(".player").each((i, a) => $(a).css("z-index", i + 1));
+    }
+  );
 
-function myFunction() {
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("playerTable");
-  rows = table.getElementsByTagName("tr");
-  for (i = 0; i < rows.length; i++) {
-    if (rows[i].id.toUpperCase().indexOf(filter) > -1) {
-      rows[i].style.display = "";
-    } else {
-      rows[i].style.display = "none";
+  function removeFav(id) {
+    $.ajax({
+      method: "PUT",
+      url: `/api/fav/remove/${currentUser.id}/${id}`
+    });
+  }
+
+  function addFav(id) {
+    $.ajax({
+      method: "PUT",
+      url: `/api/fav/add/${currentUser.id}/${id}`
+    });
+  }
+
+  function myFunction() {
+    let input, filter, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("playerTable");
+    rows = table.getElementsByTagName("tr");
+    for (i = 0; i < rows.length; i++) {
+      if (rows[i].id.toUpperCase().indexOf(filter) > -1) {
+        rows[i].style.display = "";
+      } else {
+        rows[i].style.display = "none";
+      }
     }
   }
-}
+});

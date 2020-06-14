@@ -2,11 +2,13 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    /* background: #333; */
+    background: #333;
     /* display: flex; */
     /* justify-content: center; */
     align-items: center;   
+    color: black;
     font-family: 'Shadows Into Light', cursive;
+    font-size: x-large;
     background-color: #050505; 
 }
 
@@ -15,6 +17,8 @@ body {
     position: relative;
     display: flex;
     justify-content: space-between;
+    color: white;
+    font-size: x-large;
 }
 
 .player {
@@ -45,6 +49,9 @@ body {
     background: #4aada9;
 }
 
+.col-3 {
+  top: 90px;
+}
 
 .player .icon .fa {
     position: absolute;
@@ -135,7 +142,7 @@ i {
 
 .container a {
     text-decoration: none;
-    color: #414141;
+    color: white;
 }
 
 #myInput {
@@ -173,6 +180,7 @@ i {
 }
 
 .nav {
+  color: #f7fcfc;
     padding: 1rem
 }
 
@@ -190,14 +198,14 @@ new css */
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 200;
   background-color: #2e353d;
   position: fixed;
-  top: 0px;
-  width: 250px;
-  height: ;
-  color: #e1ffff;
+  top: 185px;
+  /* width: 250px;
+  height: ; */
+  color: white;
   padding: 10px;
 }
 .nav-side-menu .brand {
@@ -301,6 +309,7 @@ new css */
   color: #e1ffff;
 }
 .nav-side-menu li a i {
+  color: white
   padding-left: 10px;
   width: 20px;
   padding-right: 20px;
@@ -345,10 +354,11 @@ new css */
     display: block;
   }
 }
-body {
+/* body {
   margin: 0px;
   padding: 0px;
-}
+  background-color: black;
+} */
 
 .nav-side-menu ul .sub-menu ul .sub-line li.active,
 .nav-side-menu li .sub-menu li .sub-line li.active {
@@ -388,7 +398,7 @@ body {
 }
 .nav-side-menu .sub-menu li a {
   text-decoration: none;
-  color: #e1ffff;
+  color: #f7fcfc;
 }
 .sub-menu li a i {
   padding-left: 10px;
@@ -398,6 +408,7 @@ body {
 .nav-side-menu li .sub-menu li:hover {
   border-left: 3px solid #d19b3d;
   background-color: #4f5b69;
+  color: #f7fcfc;
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -419,11 +430,14 @@ body {
     z-index: 10 !important;
     padding: 3px;
     background-color: #ffffff;
-    color: #000;
+    color: white;
     width: 40px;
     text-align: center;
+    font-size: x-large;
+    
   }
   
+ 
   .sub-line ul .sub-press li.active,
 .sub-line li .sub-press li.active {
   color: #d19b3d;
