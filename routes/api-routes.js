@@ -1,5 +1,6 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
+const { Op } = require("sequelize");
 const passport = require("../config/passport");
 
 module.exports = function(app) {
@@ -44,9 +45,18 @@ module.exports = function(app) {
     } else {
       // Otherwise send back the user's email and id
       // Sending back a password, even a hashed password, isn't a good idea
-      res.json({
-        email: req.user.email,
-        id: req.user.id
+      db.User.findOne({ where: { id: req.user.id } }).then(user => {
+        console.log(user.favs);
+        const queryArr = JSON.parse(user.favs).reduce(
+          (a, b) => (a.push({ id: +b }), a),
+          []
+        );
+        db.Player.findAll({
+          where: {
+            [Op.or]: queryArr
+          }
+        }).then(favs => res.send({ players: favs.map(a => a.dataValues), ...user })
+        );
       });
     }
   });
