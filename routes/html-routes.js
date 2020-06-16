@@ -25,8 +25,13 @@ module.exports = function(app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, (req, res) => {
-    db.Player.findAll().then((data) => {
-      const players = data.map((a) => a.dataValues);
+    db.Player.findAll().then(data => {
+      const favs = JSON.parse(req.user.favs);
+      console.log(favs);
+      const players = data.map(a => ({
+        ...a.dataValues,
+        fav: favs.includes(a.dataValues.id + "")
+      }));
       res.render("member", { players });
     });
   });

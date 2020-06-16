@@ -199,7 +199,7 @@
                     <td>{{STL}}</td>
                     <td>{{BLK}}</td>
                     <td>{{TOV}}</td>
-                    <td><i class="fa fa-heart fa-2x" aria-hidden="true" style="position: relative!important;top:15px" data-fav = false data-id = {{id}}></i></td>
+                    <td><i class="fa fa-heart fa-2x" aria-hidden="true" style="position: relative!important;top:15px; {{#if fav}}color:red{{/if}}" data-fav = {{fav}} data-id = {{id}}></i></td>
                     </tr>
                 {{/each}}
             </table>

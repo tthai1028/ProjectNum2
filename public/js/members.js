@@ -4,6 +4,7 @@ $(document).ready(() => {
   let currentUser;
   $.get("/api/user_data").then(data => {
     currentUser = data;
+    console.log(currentUser);
     $(".member-name").text(data.email);
   });
 
