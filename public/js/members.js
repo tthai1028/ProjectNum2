@@ -47,12 +47,11 @@ $(document).ready(() => {
     });
   }
 
-  function myFunction() {
-    let input, filter, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("playerTable");
-    rows = table.getElementsByTagName("tr");
+  $("#myInput").on("keyup", () => {
+    const input = document.getElementById("myInput");
+    const filter = input.value.toUpperCase();
+    const table = document.getElementById("playerTable");
+    const rows = table.getElementsByTagName("tr");
     for (i = 0; i < rows.length; i++) {
       if (rows[i].id.toUpperCase().indexOf(filter) > -1) {
         rows[i].style.display = "";
@@ -60,5 +59,5 @@ $(document).ready(() => {
         rows[i].style.display = "none";
       }
     }
-  }
+  });
 });
