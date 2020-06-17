@@ -12,7 +12,19 @@ body {
     background-color: #050505; 
 
 }
-
+.col-2 {
+  /* -ms-flex: 0 0 16.666667%; */
+  top: 101px;
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+}
+.top5 { padding-top:5px; }
+.top7 { padding-top:7px; }
+.top10 { padding-top:10px; }
+.top15 { padding-top:15px; }
+.top17 { padding-top:17px; }
+.top30 { padding-top:100px; }
+.mleft { margin-left: 15px;}
 .parallax {
   /* The image used */
   background-image: "..\..\Basketball Images/Kobe-Bryant.jpg";
@@ -181,7 +193,6 @@ i {
   background-repeat: no-repeat; /* Do not repeat the icon image */
   width: 70%; /* Full-width */
   font-size: 16px; /* Increase font-size */
-  padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
 }
 
@@ -207,6 +218,14 @@ i {
 
 #myUL li a:hover:not(.header) {
   background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+.navbar {
+  min-height:32px !important
+}
+.navbar-dark > li > a, .navbar-brand {
+  padding-top:5px !important; padding-bottom:0 !important;
+  height: 30px;
 }
 
 .nav {
