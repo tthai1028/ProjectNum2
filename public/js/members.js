@@ -12,7 +12,7 @@ $(document).ready(() => {
   function renderCards(players) {
     for (let i = 0; i < players.length; i++) {
       $(`#startImg${i}`).html(`
-      <img class="img-fluid" src="https://media.gettyimages.com/photos/feb-2000-steve-francis-of-the-houston-rockets-jumps-to-the-basket-picture-id72484004?s=612x612"/>
+      <img class="img-fluid" width="100%" src="https://media.gettyimages.com/photos/feb-2000-steve-francis-of-the-houston-rockets-jumps-to-the-basket-picture-id72484004?s=612x612"/>
       `);
       $(`#start${i}`).html(`
         <div class="row">${players[i].PLAYER}</div>
