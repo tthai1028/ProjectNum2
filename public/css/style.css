@@ -7,24 +7,28 @@ body {
     /* justify-content: center; */
     align-items: center;   
     color: black;
-    font-family: 'Shadows Into Light', cursive;
-    font-size: x-large;
+    font-family: 'Courier New', cursive;
+    font-size: large;
     background-color: #050505; 
 
 }
 .col-2 {
-  /* -ms-flex: 0 0 16.666667%; */
   top: 101px;
   flex: 0 0 16.666667%;
   max-width: 16.666667%;
 }
+
 .top5 { padding-top:5px; }
 .top7 { padding-top:7px; }
 .top10 { padding-top:10px; }
 .top15 { padding-top:15px; }
-.top17 { padding-top:17px; }
+.top17 { padding-top:30px; }
 .top30 { padding-top:100px; }
-.mleft { margin-left: 15px;}
+.mleft15 { margin-left: 15px;}
+.mleft50 { margin-left: 50px;}
+.mright {margin-right: 15px;}
+.mbottom20 {margin-bottom: 20px;}
+
 .parallax {
   /* The image used */
   background-image: "..\..\Basketball Images/Kobe-Bryant.jpg";
@@ -45,14 +49,8 @@ body {
     display: flex;
     justify-content: space-between;
     color: white;
-    font-size: x-large;
+    font-size: small;
 }
-
-/* #startImg0 {
-    object-fit: cover;
-    max-height: 250px;
-    max-width: 150px;
-} */
 
 .player {
     position: relative;
@@ -84,6 +82,10 @@ body {
 
 .player:nth-child(4) .icon {
     background: #ad4a94;
+}
+
+.h1 {
+   font-family: "Times New Roman", Times, serif;
 }
 
 .player .icon .fa {
@@ -562,4 +564,11 @@ new css */
     text-align: center;
   }
   /* end of new css */
+
+  .col-2 {
+    /* -ms-flex: 0 0 16.666667%; */
+    top: 101px;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
 
