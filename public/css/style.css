@@ -3,8 +3,6 @@ body {
     padding: 0;
     min-height: 100vh;
     background: #333;
-    /* display: flex; */
-    /* justify-content: center; */
     align-items: center;   
     color: black;
     font-family: 'Courier New', cursive;
@@ -30,13 +28,8 @@ body {
 .mbottom20 {margin-bottom: 20px;}
 
 .parallax {
-  /* The image used */
   background-image: "..\..\Basketball Images/Kobe-Bryant.jpg";
-
-  /* Set a specific height */
   min-height: 500px; 
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -201,7 +194,7 @@ i {
 
 
 #myUL {
-  /* Remove default list styling */
+
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -239,14 +232,12 @@ i {
   display: none;
 }
 
-/* Hide scrollbar for IE and Edge */
 .table-responsive {
   -ms-overflow-style: none;
   top: 100px;
   box-shadow: 0 5px 6px 2px gainsboro;
 }
-/* 
-new css */
+
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
@@ -255,8 +246,6 @@ new css */
   background-color: #2e353d;
   position: fixed;
   top: 185px;
-  /* width: 250px;
-  height: ; */
   color: white;
   padding: 10px;
 }
@@ -272,7 +261,6 @@ new css */
 }
 
 .video {
-  /* width: 220px; */
   display: flex;
   align-self: center;
   width:90%;
@@ -292,19 +280,6 @@ new css */
   margin: 0px;
   line-height: 35px;
   cursor: pointer;
-  /*    
-    .collapsed{
-       .arrow:before{
-                 font-family: FontAwesome;
-                 content: "\f053";
-                 display: inline-block;
-                 padding-left:10px;
-                 padding-right: 10px;
-                 vertical-align: middle;
-                 float:right;
-            }
-     }
-*/
 }
 .nav-side-menu ul :not(collapsed) .arrow:before,
 .nav-side-menu li :not(collapsed) .arrow:before {
@@ -314,7 +289,6 @@ new css */
   padding-left: 10px;
   padding-right: 10px;
   vertical-align: middle;
-  float: right;
 }
 .nav-side-menu ul .active,
 .nav-side-menu li .active {
@@ -337,6 +311,7 @@ new css */
   line-height: 28px;
   border-bottom: 1px solid #23282e;
   margin-left: 0px;
+  padding: 5px;
 }
 .nav-side-menu ul .sub-menu li:hover,
 .nav-side-menu li .sub-menu li:hover {
@@ -351,21 +326,18 @@ new css */
   padding-right: 10px;
   vertical-align: middle;
 }
-.nav-side-menu li {
-  padding-left: 0px;
-  border-left: 3px solid #2e353d;
-  border-bottom: 1px solid #23282e;
-}
+
 .nav-side-menu li a {
   text-decoration: none;
   color: #e1ffff;
 }
 .nav-side-menu li a i {
-  color: white
+  color: white;
   padding-left: 10px;
   width: 20px;
   padding-right: 20px;
 }
+
 .nav-side-menu li:hover {
   border-left: 3px solid #d19b3d;
   background-color: #4f5b69;
@@ -406,11 +378,6 @@ new css */
     display: block;
   }
 }
-/* body {
-  margin: 0px;
-  padding: 0px;
-  background-color: black;
-} */
 
 .nav-side-menu ul .sub-menu ul .sub-line li.active,
 .nav-side-menu li .sub-menu li .sub-line li.active {
@@ -443,11 +410,6 @@ new css */
   vertical-align: middle;
 }
 
-.nav-side-menu .sub-menu li {
-  padding-left: 20px;
-  border-left: 3px solid #2e353d;
-  border-bottom: 1px solid #23282e;
-}
 .nav-side-menu .sub-menu li a {
   text-decoration: none;
   color: #f7fcfc;
@@ -544,12 +506,14 @@ new css */
   -ms-transition: all 1s ease;
   transition: all 1s ease;
 }
+
 @media (max-width: 767px) {
   .sub-line {
     position: relative;
     width: 100%;
     margin-bottom: 10px;
   }
+}
   .sub-line .toggle-btn {
     display: block;
     cursor: pointer;
@@ -563,12 +527,11 @@ new css */
     width: 40px;
     text-align: center;
   }
-  /* end of new css */
 
   .col-2 {
-    /* -ms-flex: 0 0 16.666667%; */
     top: 101px;
     flex: 0 0 16.666667%;
     max-width: 16.666667%;
 }
 
+}
