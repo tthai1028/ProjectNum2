@@ -24,6 +24,6 @@ module.exports = function(sequelize, DataTypes) {
     TOV: DataTypes.INTEGER,
     EFG: DataTypes.DOUBLE,
     TS: DataTypes.DOUBLE,
-    URL: DataTypes.STRING
+    URL: DataTypes.TEXT
   });
 };
