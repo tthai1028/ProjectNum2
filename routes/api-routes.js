@@ -55,8 +55,12 @@ module.exports = function(app) {
           where: {
             [Op.or]: queryArr
           }
-        }).then(favs => res.send({ players: favs.map(a => a.dataValues), ...user })
-        );
+        }).then(favs => {
+          res.json({
+            ...user.dataValues,
+            players: favs.map(a => a.dataValues)
+          });
+        });
       });
     }
   });
