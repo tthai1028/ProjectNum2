@@ -7,8 +7,8 @@ body {
     /* justify-content: center; */
     align-items: center;   
     color: black;
-    font-family: 'Shadows Into Light', cursive;
-    font-size: x-large;
+    font-family: 'Courier New', cursive;
+    font-size: large;
     background-color: #050505; 
 
 }
@@ -45,7 +45,7 @@ body {
     display: flex;
     justify-content: space-between;
     color: white;
-    font-size: x-large;
+    font-size: small;
 }
 
 /* #startImg0 {
@@ -84,6 +84,10 @@ body {
 
 .player:nth-child(4) .icon {
     background: #ad4a94;
+}
+
+.h1 {
+   font-family: "Times New Roman", Times, serif;
 }
 
 .player .icon .fa {
@@ -562,4 +566,11 @@ new css */
     text-align: center;
   }
   /* end of new css */
+
+  .col-2 {
+    /* -ms-flex: 0 0 16.666667%; */
+    top: 101px;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+}
 

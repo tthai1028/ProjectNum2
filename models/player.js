@@ -23,6 +23,7 @@ module.exports = function(sequelize, DataTypes) {
     BLK: DataTypes.INTEGER,
     TOV: DataTypes.INTEGER,
     EFG: DataTypes.DOUBLE,
-    TS: DataTypes.DOUBLE
+    TS: DataTypes.DOUBLE,
+    URL: DataTypes.STRING
   });
 };

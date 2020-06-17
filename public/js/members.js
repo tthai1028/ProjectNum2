@@ -12,7 +12,11 @@ $(document).ready(() => {
   function renderCards(players) {
     for (let i = 0; i < players.length; i++) {
       $(`#startImg${i}`).html(`
+<<<<<<< Updated upstream
       <img class="img-fluid" width="100%" src="https://media.gettyimages.com/photos/feb-2000-steve-francis-of-the-houston-rockets-jumps-to-the-basket-picture-id72484004?s=612x612"/>
+=======
+      <img src="https://clutchpoints.com/wp-content/uploads/2018/07/Karl-Malone-Lakers.jpg" alt="basketball player" width="100">
+>>>>>>> Stashed changes
       `);
       $(`#start${i}`).html(`
         <div class="row">${players[i].PLAYER}</div>
@@ -38,7 +42,7 @@ $(document).ready(() => {
     <div class="row">BLK</div>
     <div class="row">TOV</div>
   </div>
-  <div class="col-3">
+  <div class="col-3" >
     <div class="row">${players[i].REB}</div>
     <div class="row">${players[i].AST}</div>
     <div class="row">${players[i].STL}</div>
