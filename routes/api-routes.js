@@ -78,6 +78,6 @@ module.exports = function(app) {
         where: { id: params.uId }
       }
     );
-    console.log(favs);
+    res.json("updated!");
   });
 };

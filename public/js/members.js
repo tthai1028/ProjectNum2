@@ -2,23 +2,27 @@ $(document).ready(() => {
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
   let currentUser;
-  $.get("/api/user_data").then(data => {
-    currentUser = data;
-    console.log(currentUser);
-    renderCards(currentUser.players);
-    $(".member-name").text(data.email);
-  });
+  function getUserData() {
+    $.get("/api/user_data").then(data => {
+      currentUser = data;
+      console.log(currentUser);
+      renderCards(currentUser.players);
+      $(".member-name").text(data.email);
+    });
+  }
 
   function renderCards(players) {
-    for (let i = 0; i < players.length; i++) {
-      $(`#startImg${i}`).html(`
-<<<<<<< Updated upstream
-      <img class="img-fluid" width="100%" src="https://media.gettyimages.com/photos/feb-2000-steve-francis-of-the-houston-rockets-jumps-to-the-basket-picture-id72484004?s=612x612"/>
-=======
-      <img src="https://clutchpoints.com/wp-content/uploads/2018/07/Karl-Malone-Lakers.jpg" alt="basketball player" width="100">
->>>>>>> Stashed changes
-      `);
-      $(`#start${i}`).html(`
+    for (let i = 0; i < 5; i++) {
+      $(`#startImg${i}`).html(
+        players[i]
+          ? `<img src="${players[i].URL}" alt="basketball player" width="100%">`
+          : `<div class="icon">
+                            <i class="fas fa-basketball-ball" aria-hidden="true"></i>
+                        </div>`
+      );
+      $(`#start${i}`).html(
+        players[i]
+          ? `
         <div class="row">${players[i].PLAYER}</div>
         <div class="row">
         <div class="col-3">
@@ -50,7 +54,9 @@ $(document).ready(() => {
     <div class="row">${players[i].TOV}</div>
   </>
 </div>
-      `);
+      `
+          : "<h1>Start Building Your Five</h1>"
+      );
     }
   }
 
@@ -82,14 +88,14 @@ $(document).ready(() => {
     $.ajax({
       method: "PUT",
       url: `/api/fav/remove/${currentUser.id}/${id}`
-    });
+    }).then(() => getUserData());
   }
 
   function addFav(id) {
     $.ajax({
       method: "PUT",
       url: `/api/fav/add/${currentUser.id}/${id}`
-    });
+    }).then(() => getUserData());
   }
 
   $("#myInput").on("keyup", () => {
@@ -105,4 +111,6 @@ $(document).ready(() => {
       }
     }
   });
+
+  getUserData();
 });
