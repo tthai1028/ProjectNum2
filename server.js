@@ -1,7 +1,7 @@
 const express = require("express");
 const session = require("express-session");
 const db = require("./models");
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT;
 const app = express();
 const handlebars = require("express-handlebars");
 const passport = require("./config/passport");
