@@ -4,9 +4,8 @@
     <input type="text" class="nav-item" id="myInput" placeholder="Search for Players.." style="font-size:xx-large">
     <a class="nav-link" href="/logout"> <button class="btn btn-secondary btn-lg"
             style="color: white; font-size:xx-large">Log Out</button></a>
-    </div>
-    </div>
 </nav>
+
 <div class="container-fluid">
     <div class="row">
         <div class="nav-side-menu mleft15" style='width:12vw'>
@@ -14,12 +13,12 @@
             <div class="menu-list">
                 <ul id="menu-content" class="menu-content collapse out">
                     <li>
-                        <p>Welcome <span class="member-name"></span></p>
+                        <p class = "text-center">Welcome <span class="member-name"></span></p>
                     </li>
                     <li data-toggle="collapse" data-target="#products" class="collapsed active">
                         <a href="#"><i class="fa fa-lg"></i> NBA INFO <span class="arrow"></span></a>
                     </li>
-                    <ul class="sub-menu collapse" id="products">
+                    <ul class="sub-menu collapse" id="products" class = >
                         <li class="active"><a href="https://sports.yahoo.com/nba/" target="_blank">NBA News</a></li>
                         <li><a href="https://www.nba.com/history/awards/finals-mvp" target="_blank">Finals MVP
                                 Winners</a></li>
@@ -52,147 +51,152 @@
         </div>
     </div>
 </div>
-    <div class="mt-5 col-9 offset-2">
-        <div class="row mleft50">
-            <div class="player col-2">
-                <div class="face face1">
-                    <div class="content" id="startImg0">
-                        <div class="icon">
-                            <i class="fas fa-basketball-ball" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content" id="start0">
-                        <h1>Start Building Your Five</h1>
+
+<div class="mt-5 col-9 offset-2">
+    <div class="row mleft50">
+        <div class="player col-2">
+            <div class="face face1">
+                <div class="content" id="startImg0">
+                    <div class="icon">
+                        <i class="fas fa-basketball-ball" aria-hidden="true"></i>
                     </div>
                 </div>
             </div>
-            <div class="player col-2">
-                <div class="face face1">
-                    <div class="content" id="startImg1">
-                        <div class="icon">
-                            <i class="fas fa-basketball-ball" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content" id="start1">
-                        <h1>Start Building Your Five</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="player col-2">
-                <div class="face face1">
-                    <div class="content" id="startImg2">
-                        <div class="icon">
-                            <i class="fas fa-basketball-ball" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content" id="start2">
-                        <h1>Start Building Your Five</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="player col-2">
-                <div class="face face1">
-                    <div class="content" id="startImg3">
-                        <div class="icon">
-                            <i class="fas fa-basketball-ball" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content" id="start3">
-                        <h1>Start Building Your Five</h1>
-                    </div>
-                </div>
-            </div>
-            <div class="player col-2">
-                <div class="face face1">
-                    <div class="content" id="startImg4">
-                        <div class="icon">
-                            <i class="fas fa-basketball-ball" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <div class="content" id="start4">
-                        <h1>Start Building Your Five</h1>
-                    </div>
+            <div class="face face2">
+                <div class="content" id="start0">
+                    <h1>Start Building Your Five</h1>
                 </div>
             </div>
         </div>
-        <div class="row top30">
-            <div class="table-responsive mt-3 mb-5 " style="height:40vh;overflow-y:auto">
-                <table class="table table-fixed table-striped table-dark " id="playerTable">
-                    <thead>
-                        <tr>
-                            <th scope="col">Player Name</th>
-                            <th scope="col">GP</th>
-                            <th scope="col">PTS</th>
-                            <th scope="col">FG%</th>
-                            <th scope="col">3P%</th>
-                            <th scope="col">FT%</th>
-                            <th scope="col">REB</th>
-                            <th scope="col">AST</th>
-                            <th scope="col">STL</th>
-                            <th scope="col">BLK</th>
-                            <th scope="col">TOV</th>
-                            <th scope="col">Add To Five</th>
-                        </tr>
-                    </thead>
-                    {{#each players}}
-                    <tr id="{{PLAYER}}">
-                        <td>{{PLAYER}}</td>
-                        <td>{{GP}}</td>
-                        <td>{{PTS}}</td>
-                        <td>{{"FG%"}}</td>
-                        <td>{{"3P%"}}</td>
-                        <td>{{"FT%"}}</td>
-                        <td>{{REB}}</td>
-                        <td>{{AST}}</td>
-                        <td>{{STL}}</td>
-                        <td>{{BLK}}</td>
-                        <td>{{TOV}}</td>
-                        <td><i class="fa fa-heart fa-2x" aria-hidden="true"
-                                style="position: relative!important;top:15px; {{#if fav}}color:red{{/if}}"
-                                data-fav={{fav}} data-id={{id}}></i></td>
-                    </tr>
-                    {{/each}}
-                </table>
+        <div class="player col-2">
+            <div class="face face1">
+                <div class="content" id="startImg1">
+                    <div class="icon">
+                        <i class="fas fa-basketball-ball" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content" id="start1">
+                    <h1>Start Building Your Five</h1>
+                </div>
+            </div>
+        </div>
+        <div class="player col-2">
+            <div class="face face1">
+                <div class="content" id="startImg2">
+                    <div class="icon">
+                        <i class="fas fa-basketball-ball" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content" id="start2">
+                    <h1>Start Building Your Five</h1>
+                </div>
+            </div>
+        </div>
+        <div class="player col-2">
+            <div class="face face1">
+                <div class="content" id="startImg3">
+                    <div class="icon">
+                        <i class="fas fa-basketball-ball" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content" id="start3">
+                    <h1>Start Building Your Five</h1>
+                </div>
+            </div>
+        </div>
+        <div class="player col-2">
+            <div class="face face1">
+                <div class="content" id="startImg4">
+                    <div class="icon">
+                        <i class="fas fa-basketball-ball" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="face face2">
+                <div class="content" id="start4">
+                    <h1>Start Building Your Five</h1>
+                </div>
             </div>
         </div>
     </div>
-            <div class="row justify-content-center mbottom20">
-                <div class = "col-12 col-md-8 top17">
-                <a href="https://cares.nba.com/nbatogether/" target="_blank">
-                    <img src="https://ak-static.cms.nba.com/wp-content/uploads/sites/54/2020/06/NBACOM_NBAT_MULTI_1170x400_v52920_v1.jpg"></img>
-                </a>
-            </div>
-<div class="col-3" class="videoBox">
+
+    <div class="row top30">
+        <div class="table-responsive mt-3 mb-5 " style="height:40vh;overflow-y:auto">
+            <table class="table table-fixed table-striped table-dark " id="playerTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Player Name</th>
+                        <th scope="col">GP</th>
+                        <th scope="col">PTS</th>
+                        <th scope="col">FG%</th>
+                        <th scope="col">3P%</th>
+                        <th scope="col">FT%</th>
+                        <th scope="col">REB</th>
+                        <th scope="col">AST</th>
+                        <th scope="col">STL</th>
+                        <th scope="col">BLK</th>
+                        <th scope="col">TOV</th>
+                        <th scope="col">Add To Five</th>
+                    </tr>
+                </thead>
+                {{#each players}}
+                <tr id="{{PLAYER}}">
+                    <td>{{PLAYER}}</td>
+                    <td>{{GP}}</td>
+                    <td>{{PTS}}</td>
+                    <td>{{"FG%"}}</td>
+                    <td>{{"3P%"}}</td>
+                    <td>{{"FT%"}}</td>
+                    <td>{{REB}}</td>
+                    <td>{{AST}}</td>
+                    <td>{{STL}}</td>
+                    <td>{{BLK}}</td>
+                    <td>{{TOV}}</td>
+                    <td><i class="fa fa-heart fa-2x" aria-hidden="true"
+                            style="position: relative!important;top:15px; {{#if fav}}color:red{{/if}}" data-fav={{fav}}
+                            data-id={{id}}></i></td>
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="row justify-content-center mbottom20">
+    <div class="col-12 col-md-8 top17">
+        <a href="https://cares.nba.com/nbatogether/" target="_blank">
+            <img
+                src="https://ak-static.cms.nba.com/wp-content/uploads/sites/54/2020/06/NBACOM_NBAT_MULTI_1170x400_v52920_v1.jpg"></img>
+        </a>
+    </div>
+    <div class="col-3" class="videoBox">
         <div class="row">
-            <video class="video" width="320" height="240"  controls autoplay>
-            <source
-                src="https://apv-static.minute.ly/videos/v-7bbbc84a-88b5-4d00-970693-a046-ea8ed4274d5b-s411.28-420.62l.mp4"
-                type="video/mp4">
-            <source
-                src="https://gcdn.2mdn.net/videoplayback/id/e44849db6539332d/itag/346/source/doubleclick_dmm/ctier/L/acao/yes/ip/0.0.0.0/ipbits/0/expire/3720376709/sparams/id,itag,source,ctier,acao,ip,ipbits,expire/signature/13CEB9563C295180BD134B506C2F9873D600D365.812649A0A21C08EA67B5DF44DFDB482ADCD0C778/key/ck2/file/file.mp4"
-                type="video/ogg">
-            Your browser does not support the video tag.
-        </video>
+            <video class="video" width="320" height="240" controls autoplay>
+                <source
+                    src="https://apv-static.minute.ly/videos/v-7bbbc84a-88b5-4d00-970693-a046-ea8ed4274d5b-s411.28-420.62l.mp4"
+                    type="video/mp4">
+                <source
+                    src="https://gcdn.2mdn.net/videoplayback/id/e44849db6539332d/itag/346/source/doubleclick_dmm/ctier/L/acao/yes/ip/0.0.0.0/ipbits/0/expire/3720376709/sparams/id,itag,source,ctier,acao,ip,ipbits,expire/signature/13CEB9563C295180BD134B506C2F9873D600D365.812649A0A21C08EA67B5DF44DFDB482ADCD0C778/key/ck2/file/file.mp4"
+                    type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
         </div>
         <div class="row mt-3">
-        <div class="kobe">
-            <a href="https://www.nba.com/video/2020/01/28/kobe-bryant-obituary" target="_blank"><img class="imgBox" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5298bac0-b8bf-4c80-af67-725c1272dbb0/dbx6zbe-e9bca758-5137-4e78-b7ef-42a785593532.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNTI5OGJhYzAtYjhiZi00YzgwLWFmNjctNzI1YzEyNzJkYmIwXC9kYng2emJlLWU5YmNhNzU4LTUxMzctNGU3OC1iN2VmLTQyYTc4NTU5MzUzMi5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.Vy1yXeYbU33MIbHdJ4gm0cDFXPRup0OoxlV1k3eWF0g" style='width:100%'></a>
-            </a>
-        </div>
+            <div class="kobe">
+                <a href="https://www.nba.com/video/2020/01/28/kobe-bryant-obituary" target="_blank"><img class="imgBox"
+                        src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5298bac0-b8bf-4c80-af67-725c1272dbb0/dbx6zbe-e9bca758-5137-4e78-b7ef-42a785593532.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNTI5OGJhYzAtYjhiZi00YzgwLWFmNjctNzI1YzEyNzJkYmIwXC9kYng2emJlLWU5YmNhNzU4LTUxMzctNGU3OC1iN2VmLTQyYTc4NTU5MzUzMi5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.Vy1yXeYbU33MIbHdJ4gm0cDFXPRup0OoxlV1k3eWF0g"
+                        style='width:100%'></a>
+                </a>
+            </div>
         </div>
     </div>
 </div>
-</div>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src="js/members.js"></script>
-</body>
