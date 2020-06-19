@@ -5,14 +5,16 @@ const path = "../db/Start5_db.csv";
 const runSeed = async () => {
   try {
     const seeds = await csv().fromFile(path);
-    const mapped = seeds.map((a) => {
+    const mapped = seeds.map(a => {
       delete a["#"];
       return a;
     });
-    await db.Player.bulkCreate(mapped)
+    await db.Player.bulkCreate(mapped);
   } catch (err) {
-    console.log(err);
+    console.log("run seed", err);
   }
 };
 
-runSeed();
+module.exports = runSeed;
+
+//runSeed();

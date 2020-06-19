@@ -2,8 +2,13 @@
 const db = require("../models");
 const { Op } = require("sequelize");
 const passport = require("../config/passport");
+const seeder = require("../utils/seeder");
 
 module.exports = function(app) {
+  app.get("/api/players/seed", async (req, res) => {
+    await seeder();
+    res.json("DB Seeded!!!!");
+  });
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, send them to the members page.
   // Otherwise the user will be sent an error
